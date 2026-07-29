@@ -1,4 +1,4 @@
-import { FileIcon, FolderIcon } from "lucide-react";
+import { IconFileFill18 as FileIcon, IconFolderFill18 as FolderIcon } from "nucleo-ui-fill-18";
 import { memo, useInsertionEffect, useMemo } from "react";
 
 import { ensurePierreIconSprite, resolvePierreIconForEntry } from "../../pierre-icons";

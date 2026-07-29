@@ -1,4 +1,4 @@
-import { MessageCircle, X } from "lucide-react";
+import { IconChatBubbleFill18 as MessageCircle, IconXmarkFill18 as X } from "nucleo-ui-fill-18";
 
 import {
   COMPOSER_INLINE_CHIP_CLASS_NAME,

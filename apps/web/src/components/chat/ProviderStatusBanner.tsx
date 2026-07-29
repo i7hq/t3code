@@ -1,6 +1,6 @@
 import { type ServerProvider } from "@t3tools/contracts";
 import { memo } from "react";
-import { InfoIcon, XIcon } from "lucide-react";
+import { IconCircleInfoFill18 as InfoIcon, IconXmarkFill18 as XIcon } from "nucleo-ui-fill-18";
 import { cn } from "~/lib/utils";
 import { formatProviderDriverKindLabel } from "../../providerModels";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "../ui/tooltip";

@@ -25,17 +25,19 @@ import {
 import { useNavigate, useParams } from "@tanstack/react-router";
 import * as Option from "effect/Option";
 import {
-  ArrowDownIcon,
-  ArrowLeftIcon,
-  ArrowUpIcon,
-  CornerLeftUpIcon,
-  FolderIcon,
-  FolderPlusIcon,
-  LinkIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-  SquarePenIcon,
-} from "lucide-react";
+  IconArrowDownFill18 as ArrowDownIcon,
+  IconArrowLeftFill18 as ArrowLeftIcon,
+  IconArrowUpFill18 as ArrowUpIcon,
+  IconArrowCornerUpLeftFill18 as CornerLeftUpIcon,
+  IconMsgFill18 as MessageSquareIcon,
+  IconEditSquareFill18 as SquarePenIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconFolderFill18 as FolderIcon,
+  IconFolderPlusFill18 as FolderPlusIcon,
+  IconLinkFill18 as LinkIcon,
+  IconGearFill18 as SettingsIcon,
+} from "nucleo-ui-fill-18";
 import {
   useCallback,
   useDeferredValue,

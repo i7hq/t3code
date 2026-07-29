@@ -170,17 +170,19 @@ import { Select, SelectItem, SelectPopup, SelectValue } from "../ui/select";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "../ui/tooltip";
 import { toastManager } from "../ui/toast";
 import {
-  BotIcon,
-  CircleAlertIcon,
-  ListTodoIcon,
-  PencilRulerIcon,
-  type LucideIcon,
-  LockIcon,
-  LockOpenIcon,
-  PenLineIcon,
-  SparklesIcon,
-  XIcon,
-} from "lucide-react";
+  IconRulerPenFill18 as PencilRulerIcon,
+  IconLockFill18 as LockIcon,
+  IconLockOpenFill18 as LockOpenIcon,
+  IconPencilFill18 as PenLineIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconRobotFill18 as BotIcon,
+  IconCircleWarningFill18 as CircleAlertIcon,
+  IconListTodoFill18 as ListTodoIcon,
+  IconSparkleFill18 as SparklesIcon,
+  IconXmarkFill18 as XIcon,
+  type IconProps,
+} from "nucleo-ui-fill-18";
 import { proposedPlanTitle } from "../../proposedPlan";
 import { getProviderDisplayName, getProviderInteractionModeToggle } from "../../providerModels";
 import {
@@ -210,7 +212,7 @@ const IMAGE_SIZE_LIMIT_LABEL = `${Math.round(PROVIDER_SEND_TURN_MAX_IMAGE_BYTES 
 
 const runtimeModeConfig: Record<
   RuntimeMode,
-  { label: string; description: string; icon: LucideIcon }
+  { label: string; description: string; icon: React.FC<IconProps> }
 > = {
   "approval-required": {
     label: "Supervised",

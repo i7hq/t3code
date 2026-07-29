@@ -10,12 +10,12 @@ import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
 import ChatMarkdown from "./ChatMarkdown";
 import {
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  EllipsisIcon,
-  LoaderIcon,
-} from "lucide-react";
+  IconCheckFill18 as CheckIcon,
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconDotsFill18 as EllipsisIcon,
+  IconLoaderFill18 as LoaderIcon,
+} from "nucleo-ui-fill-18";
 import { cn } from "~/lib/utils";
 import type { ActivePlanState } from "../session-logic";
 import type { LatestProposedPlanState } from "../session-logic";

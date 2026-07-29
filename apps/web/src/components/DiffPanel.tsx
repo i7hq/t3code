@@ -7,18 +7,20 @@ import {
 import { safeErrorLogAttributes } from "@t3tools/client-runtime/errors";
 import type { ScopedThreadRef, TurnId } from "@t3tools/contracts";
 import {
-  ArrowRightIcon,
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-  Columns2Icon,
-  PilcrowIcon,
-  Rows3Icon,
-  SearchIcon,
-  TextWrapIcon,
-} from "lucide-react";
+  IconArrowRightFill18 as ArrowRightIcon,
+  IconChevronReduceYFill18 as ChevronsDownUpIcon,
+  IconSplitViewFill18 as Columns2Icon,
+  IconPilcrowFill18 as PilcrowIcon,
+  IconGridLayoutRows3Fill18 as Rows3Icon,
+  IconReturnKeyFill18 as TextWrapIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconCheckFill18 as CheckIcon,
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconChevronExpandYFill18 as ChevronsUpDownIcon,
+  IconMagnifierFill18 as SearchIcon,
+} from "nucleo-ui-fill-18";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useOpenInPreferredEditor } from "../editorPreferences";
 import { type DraftId } from "../composerDraftStore";

@@ -1,5 +1,5 @@
 import type { EnvironmentId } from "@t3tools/contracts";
-import { Globe, RadioTower } from "lucide-react";
+import { IconAntennaFill18 as RadioTower, IconGlobeFill18 as Globe } from "nucleo-ui-fill-18";
 
 import { Empty, EmptyDescription, EmptyMedia, EmptyTitle } from "~/components/ui/empty";
 

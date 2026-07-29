@@ -1,7 +1,12 @@
 "use client";
 
 import type { DesktopPreviewColorScheme } from "@t3tools/contracts";
-import { Minus, MoreVertical, Plus as PlusIcon, RotateCcw } from "lucide-react";
+import {
+  IconArrowRotateAnticlockwiseFill18 as RotateCcw,
+  IconDotsVerticalFill18 as MoreVertical,
+  IconMinusFill18 as Minus,
+  IconPlusFill18 as PlusIcon,
+} from "nucleo-ui-fill-18";
 
 import { Button } from "~/components/ui/button";
 import {

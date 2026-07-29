@@ -1,4 +1,4 @@
-import { Undo2Icon } from "lucide-react";
+import { IconUndo2Fill18 as Undo2Icon } from "nucleo-ui-fill-18";
 import { type ComponentPropsWithoutRef, type ReactNode, useEffect, useState } from "react";
 
 import { cn } from "../../lib/utils";

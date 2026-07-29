@@ -1,6 +1,9 @@
 import { ProviderInteractionMode, RuntimeMode } from "@t3tools/contracts";
 import { memo, type ReactNode } from "react";
-import { EllipsisIcon, ListTodoIcon } from "lucide-react";
+import {
+  IconDotsFill18 as EllipsisIcon,
+  IconListTodoFill18 as ListTodoIcon,
+} from "nucleo-ui-fill-18";
 import { Button } from "../ui/button";
 import {
   Menu,

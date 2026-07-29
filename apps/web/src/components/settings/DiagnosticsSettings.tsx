@@ -1,12 +1,14 @@
 import {
-  AlertTriangleIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  CopyIcon,
-  FolderOpenIcon,
-  InfoIcon,
-  RefreshCwIcon,
-} from "lucide-react";
+  IconTriangleWarningFill18 as AlertTriangleIcon,
+  IconFolderOpenFill18 as FolderOpenIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconCircleInfoFill18 as InfoIcon,
+  IconCopyFill18 as CopyIcon,
+  IconRefreshClockwiseFill18 as RefreshCwIcon,
+} from "nucleo-ui-fill-18";
 import { useAtomValue } from "@effect/atom-react";
 import {
   isAtomCommandInterrupted,

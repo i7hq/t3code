@@ -39,25 +39,27 @@ import {
 } from "../../lib/diffRendering";
 import ChatMarkdown from "../ChatMarkdown";
 import {
-  BotIcon,
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  CircleAlertIcon,
-  EyeIcon,
-  GlobeIcon,
-  HammerIcon,
-  MessageCircleIcon,
-  MousePointerClickIcon,
-  PaintbrushIcon,
-  MinusIcon,
-  SquarePenIcon,
-  TerminalIcon,
-  Undo2Icon,
-  WrenchIcon,
-  XIcon,
-  ZapIcon,
-} from "lucide-react";
+  IconEyeFill18 as EyeIcon,
+  IconGlobeFill18 as GlobeIcon,
+  IconHammerFill18 as HammerIcon,
+  IconChatBubbleFill18 as MessageCircleIcon,
+  IconCursorRaysFill18 as MousePointerClickIcon,
+  IconPaintbrushFill18 as PaintbrushIcon,
+  IconEditSquareFill18 as SquarePenIcon,
+  IconWrenchFill18 as WrenchIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconRobotFill18 as BotIcon,
+  IconCheckFill18 as CheckIcon,
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconCircleWarningFill18 as CircleAlertIcon,
+  IconMinusFill18 as MinusIcon,
+  IconTerminalFill18 as TerminalIcon,
+  IconUndo2Fill18 as Undo2Icon,
+  IconXmarkFill18 as XIcon,
+  IconBoltFill18 as ZapIcon,
+} from "nucleo-ui-fill-18";
 import { Button } from "../ui/button";
 import { buildExpandedImagePreview, ExpandedImagePreview } from "./ExpandedImagePreview";
 import { ProposedPlanCard } from "./ProposedPlanCard";

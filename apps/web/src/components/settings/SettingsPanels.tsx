@@ -1,4 +1,10 @@
-import { ArchiveIcon, ArchiveX, LoaderIcon, PlusIcon, RefreshCwIcon } from "lucide-react";
+import {
+  IconArchiveFill18 as ArchiveIcon,
+  IconArchiveMinusFill18 as ArchiveX,
+  IconLoaderFill18 as LoaderIcon,
+  IconPlusFill18 as PlusIcon,
+  IconRefreshClockwiseFill18 as RefreshCwIcon,
+} from "nucleo-ui-fill-18";
 import { Link } from "@tanstack/react-router";
 import type { CSSProperties } from "react";
 import { useCallback, useMemo, useRef, useState } from "react";

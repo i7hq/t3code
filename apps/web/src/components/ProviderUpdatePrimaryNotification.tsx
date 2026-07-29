@@ -1,6 +1,6 @@
 import { useNavigate } from "@tanstack/react-router";
 import { useAtomValue } from "@effect/atom-react";
-import { DownloadIcon } from "lucide-react";
+import { IconDownloadFill18 as DownloadIcon } from "nucleo-ui-fill-18";
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import { type ProviderDriverKind, type ProviderInstanceId } from "@t3tools/contracts";
 
@@ -42,7 +42,7 @@ function ProviderUpdateToastIcon({ provider }: { provider: ProviderDriverKind })
   if (!ProviderIcon) {
     return (
       <span className="relative inline-flex size-4 shrink-0 items-center justify-center">
-        <DownloadIcon aria-hidden="true" className="size-4 text-success" strokeWidth={2.5} />
+        <DownloadIcon aria-hidden="true" className="size-4 text-success" />
       </span>
     );
   }
@@ -51,7 +51,7 @@ function ProviderUpdateToastIcon({ provider }: { provider: ProviderDriverKind })
     <span className="relative inline-flex size-4 shrink-0 items-center justify-center">
       <ProviderIcon aria-hidden="true" className="size-4" />
       <span className="absolute -right-1 -bottom-1 inline-flex size-3 items-center justify-center rounded-full bg-popover">
-        <DownloadIcon aria-hidden="true" className="size-2.5 text-success" strokeWidth={2.5} />
+        <DownloadIcon aria-hidden="true" className="size-2.5 text-success" />
       </span>
     </span>
   );

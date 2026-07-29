@@ -1,7 +1,7 @@
 "use client";
 
 import type { DesktopPreviewPointerEvent } from "@t3tools/contracts";
-import { MousePointer2 } from "lucide-react";
+import { IconCursorDefaultFill18 as MousePointer2 } from "nucleo-ui-fill-18";
 import { useEffect, useState } from "react";
 
 import { useBrowserPointerStore } from "~/browser/browserPointerStore";
@@ -69,10 +69,7 @@ function AgentBrowserCursorEvent(props: {
           className="absolute left-0.5 top-0.5 size-4 animate-status-ping rounded-full bg-primary/25 motion-reduce:animate-none"
         />
       ) : null}
-      <MousePointer2
-        className="relative size-5 -translate-x-0.5 -translate-y-0.5 fill-background text-primary drop-shadow-sm"
-        strokeWidth={2}
-      />
+      <MousePointer2 className="relative size-5 -translate-x-0.5 -translate-y-0.5 fill-background text-primary drop-shadow-sm" />
     </div>
   );
 }

@@ -1,4 +1,7 @@
-import { MessageCircle, Trash2 } from "lucide-react";
+import {
+  IconChatBubbleFill18 as MessageCircle,
+  IconTrash2Fill18 as Trash2,
+} from "nucleo-ui-fill-18";
 import { useState } from "react";
 
 import { Button } from "~/components/ui/button";

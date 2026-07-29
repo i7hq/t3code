@@ -1,15 +1,17 @@
 import {
-  ChevronDownIcon,
-  CircleXIcon,
-  EllipsisIcon,
-  FileJsonIcon,
-  InfoIcon,
-  MinusIcon,
-  PlusIcon,
-  SearchIcon,
-  TriangleAlertIcon,
-  XIcon,
-} from "lucide-react";
+  IconCircleXmarkFill18 as CircleXIcon,
+  IconBracketsCurlyFill18 as FileJsonIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCircleInfoFill18 as InfoIcon,
+  IconDotsFill18 as EllipsisIcon,
+  IconMagnifierFill18 as SearchIcon,
+  IconMinusFill18 as MinusIcon,
+  IconPlusFill18 as PlusIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import {
   type KeyboardEvent,
   type ReactNode,

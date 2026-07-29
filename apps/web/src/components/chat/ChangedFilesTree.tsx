@@ -7,13 +7,15 @@ import {
   type TurnDiffTreeNode,
 } from "../../lib/turnDiffTree";
 import {
-  ChevronsDownUpIcon,
-  ChevronsUpDownIcon,
-  ChevronRightIcon,
-  FileDiffIcon,
-  FolderIcon,
-  FolderClosedIcon,
-} from "lucide-react";
+  IconChevronReduceYFill18 as ChevronsDownUpIcon,
+  IconCodeCompareFill18 as FileDiffIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronExpandYFill18 as ChevronsUpDownIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconFolderFill18 as FolderIcon,
+  IconFolderFill18 as FolderClosedIcon,
+} from "nucleo-ui-fill-18";
 import { cn } from "~/lib/utils";
 import { DiffStatLabel, hasNonZeroStat } from "./DiffStatLabel";
 import { PierreEntryIcon } from "./PierreEntryIcon";

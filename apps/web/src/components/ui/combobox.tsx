@@ -1,7 +1,10 @@
 "use client";
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
-import { ChevronsUpDownIcon, XIcon } from "lucide-react";
+import {
+  IconChevronExpandYFill18 as ChevronsUpDownIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import * as React from "react";
 
 import { cn } from "~/lib/utils";

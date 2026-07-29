@@ -1,7 +1,11 @@
 "use client";
 
 import type { ScopedThreadRef } from "@t3tools/contracts";
-import { PanelRightIcon, PictureInPicture2, XIcon } from "lucide-react";
+import {
+  IconSidebarRightFill18 as PanelRightIcon,
+  IconWindowBottomRightFill18 as PictureInPicture2,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import { type PointerEvent as ReactPointerEvent, useLayoutEffect, useRef } from "react";
 
 import { BrowserSurfaceSlot } from "~/browser/BrowserSurfaceSlot";

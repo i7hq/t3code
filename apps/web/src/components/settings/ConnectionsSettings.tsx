@@ -1,12 +1,14 @@
 import {
-  ChevronDownIcon,
-  ChevronsLeftRightEllipsisIcon,
-  PlusIcon,
-  QrCodeIcon,
-  RefreshCwIcon,
-  TerminalIcon,
-  TriangleAlertIcon,
-} from "lucide-react";
+  IconPlugFill18 as ChevronsLeftRightEllipsisIcon,
+  IconQrcodeFill18 as QrCodeIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconPlusFill18 as PlusIcon,
+  IconRefreshClockwiseFill18 as RefreshCwIcon,
+  IconTerminalFill18 as TerminalIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+} from "nucleo-ui-fill-18";
 import { type ReactNode, memo, useCallback, useMemo, useState } from "react";
 import {
   AuthAccessReadScope,

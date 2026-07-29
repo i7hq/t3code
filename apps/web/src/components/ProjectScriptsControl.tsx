@@ -10,17 +10,19 @@ import {
   type AtomCommandResult,
 } from "@t3tools/client-runtime/state/runtime";
 import {
-  BugIcon,
-  ChevronDownIcon,
-  DownloadIcon,
-  FlaskConicalIcon,
-  HammerIcon,
-  ListChecksIcon,
-  PlayIcon,
-  PlusIcon,
-  SettingsIcon,
-  WrenchIcon,
-} from "lucide-react";
+  IconBugFill18 as BugIcon,
+  IconFlaskFill18 as FlaskConicalIcon,
+  IconHammerFill18 as HammerIcon,
+  IconCheckListFill18 as ListChecksIcon,
+  IconMediaPlayFill18 as PlayIcon,
+  IconWrenchFill18 as WrenchIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconDownloadFill18 as DownloadIcon,
+  IconPlusFill18 as PlusIcon,
+  IconGearFill18 as SettingsIcon,
+} from "nucleo-ui-fill-18";
 import React, { type FormEvent, type KeyboardEvent, useCallback, useMemo, useState } from "react";
 
 import {

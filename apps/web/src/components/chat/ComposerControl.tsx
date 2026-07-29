@@ -1,5 +1,6 @@
+import type React from "react";
 import type { ComponentProps } from "react";
-import { ChevronDownIcon, type LucideIcon } from "lucide-react";
+import { IconChevronDownFill18 as ChevronDownIcon, type IconProps } from "nucleo-ui-fill-18";
 
 import { cn } from "~/lib/utils";
 import { Button } from "../ui/button";
@@ -29,7 +30,7 @@ export function ComposerControlIcon({
   className,
   opticalSize = "default",
 }: {
-  icon: LucideIcon;
+  icon: React.FC<IconProps>;
   className?: string | undefined;
   opticalSize?: "default" | "large";
 }) {
@@ -48,7 +49,6 @@ export function ComposerControlChevron() {
       aria-hidden="true"
       className="-mx-0.5 size-3.5 shrink-0 text-muted-foreground opacity-70"
       data-composer-control-chevron
-      strokeWidth={2.25}
     />
   );
 }

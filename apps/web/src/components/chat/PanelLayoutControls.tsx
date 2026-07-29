@@ -1,4 +1,9 @@
-import { Maximize2Icon, Minimize2Icon, PanelBottomIcon, PanelRightIcon } from "lucide-react";
+import {
+  IconChevronMaximizeDiagonalFill18 as Maximize2Icon,
+  IconChevronMinimizeDiagonalFill18 as Minimize2Icon,
+  IconLayoutBottomFill18 as PanelBottomIcon,
+  IconSidebarRightFill18 as PanelRightIcon,
+} from "nucleo-ui-fill-18";
 import { memo } from "react";
 
 import { Toggle } from "../ui/toggle";

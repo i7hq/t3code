@@ -5,7 +5,10 @@ import type {
 import type { EnvironmentId, ProjectEntry } from "@t3tools/contracts";
 import { FileTree, useFileTree } from "@pierre/trees/react";
 import { serializeComposerFileLink } from "@t3tools/shared/composerTrigger";
-import { RefreshCw, Search } from "lucide-react";
+import {
+  IconRefreshClockwiseFill18 as RefreshCw,
+  IconMagnifierFill18 as Search,
+} from "nucleo-ui-fill-18";
 import { useEffect, useMemo, useRef } from "react";
 
 import { toastManager } from "~/components/ui/toast";

@@ -2,7 +2,10 @@ import { EditorId, type EnvironmentId, type ResolvedKeybindingsConfig } from "@t
 import { memo, useCallback, useEffect, useMemo } from "react";
 import { isOpenFavoriteEditorShortcut, shortcutLabelForCommand } from "../../keybindings";
 import { usePreferredEditor } from "../../editorPreferences";
-import { ChevronDownIcon, FolderClosedIcon } from "lucide-react";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconFolderFill18 as FolderClosedIcon,
+} from "nucleo-ui-fill-18";
 import { Button } from "../ui/button";
 import { Group, GroupSeparator } from "../ui/group";
 import { Menu, MenuItem, MenuPopup, MenuShortcut, MenuTrigger } from "../ui/menu";

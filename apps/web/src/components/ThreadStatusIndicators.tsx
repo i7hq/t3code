@@ -4,7 +4,12 @@ import {
   scopeThreadRef,
 } from "@t3tools/client-runtime/environment";
 import type { VcsStatusResult } from "@t3tools/contracts";
-import { CloudIcon, FolderGit2Icon, GitPullRequestIcon, TerminalIcon } from "lucide-react";
+import {
+  IconCloudFill18 as CloudIcon,
+  IconCodePullRequestFill18 as GitPullRequestIcon,
+  IconFolder2Fill18 as FolderGit2Icon,
+  IconTerminalFill18 as TerminalIcon,
+} from "nucleo-ui-fill-18";
 import { useMemo } from "react";
 import { useEnvironment, usePrimaryEnvironmentId } from "../state/environments";
 import { useProject } from "../state/entities";

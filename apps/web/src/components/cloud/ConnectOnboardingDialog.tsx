@@ -1,6 +1,6 @@
 import { useAuth } from "@clerk/react";
 import { AuthAdministrativeScopes, AuthRelayWriteScope } from "@t3tools/contracts";
-import { CheckIcon } from "lucide-react";
+import { IconCheckFill18 as CheckIcon } from "nucleo-ui-fill-18";
 import { useEffect, useRef, useState } from "react";
 
 import {

@@ -1,4 +1,4 @@
-import { CheckIcon } from "lucide-react";
+import { IconCheckFill18 as CheckIcon } from "nucleo-ui-fill-18";
 import { type ReactNode, useCallback, useMemo, useRef, useState } from "react";
 import type { EnvironmentId, ServerProvider } from "@t3tools/contracts";
 import {

@@ -13,17 +13,17 @@ import {
 import { useParams } from "@tanstack/react-router";
 import { type ScopedThreadRef, type ThreadId } from "@t3tools/contracts";
 import {
-  CheckIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-  CircleAlertIcon,
-  CircleCheckIcon,
-  CopyIcon,
-  InfoIcon,
-  LoaderCircleIcon,
-  TriangleAlertIcon,
-  XIcon,
-} from "lucide-react";
+  IconCheckFill18 as CheckIcon,
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronUpFill18 as ChevronUpIcon,
+  IconCircleWarningFill18 as CircleAlertIcon,
+  IconCircleCheckFill18 as CircleCheckIcon,
+  IconCopyFill18 as CopyIcon,
+  IconCircleInfoFill18 as InfoIcon,
+  IconLoader2Fill18 as LoaderCircleIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 
 import { cn } from "~/lib/utils";
 import { buttonVariants } from "~/components/ui/button";
@@ -163,9 +163,9 @@ function ToastExpandableSection({
         type="button"
       >
         {open ? (
-          <ChevronUpIcon className="size-3.5 shrink-0 opacity-80" strokeWidth={2.25} />
+          <ChevronUpIcon className="size-3.5 shrink-0 opacity-80" />
         ) : (
-          <ChevronDownIcon className="size-3.5 shrink-0 opacity-80" strokeWidth={2.25} />
+          <ChevronDownIcon className="size-3.5 shrink-0 opacity-80" />
         )}
         {open ? collapseLabel : expandLabel}
       </button>
@@ -250,13 +250,11 @@ function ToastDescriptionAndExpandable({
             <ChevronUpIcon
               aria-hidden
               className="mt-0.5 size-3.5 shrink-0 text-muted-foreground opacity-80"
-              strokeWidth={2.25}
             />
           ) : (
             <ChevronDownIcon
               aria-hidden
               className="mt-0.5 size-3.5 shrink-0 text-muted-foreground opacity-80"
-              strokeWidth={2.25}
             />
           )}
         </TooltipTrigger>
@@ -670,7 +668,7 @@ function Toasts({ position }: { position: ToastPosition }) {
                   }
                   type="button"
                 >
-                  <XIcon className="size-3" strokeWidth={2.25} />
+                  <XIcon className="size-3" />
                 </button>
               </div>
               <Toast.Content
@@ -765,7 +763,7 @@ function AnchoredToasts() {
                           }
                           type="button"
                         >
-                          <XIcon className="size-3" strokeWidth={2.25} />
+                          <XIcon className="size-3" />
                         </button>
                       </div>
                       <Toast.Content

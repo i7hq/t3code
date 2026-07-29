@@ -1,17 +1,19 @@
 import {
-  ArchiveIcon,
-  ArrowUpDownIcon,
-  ChevronRightIcon,
-  CloudIcon,
-  ContainerIcon,
-  FolderPlusIcon,
-  Globe2Icon,
-  LoaderIcon,
-  SearchIcon,
-  SquarePenIcon,
-  TerminalIcon,
-  TriangleAlertIcon,
-} from "lucide-react";
+  IconSortArrowsFill18 as ArrowUpDownIcon,
+  IconShippingContainerFill18 as ContainerIcon,
+  IconGlobe2Fill18 as Globe2Icon,
+  IconEditSquareFill18 as SquarePenIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconArchiveFill18 as ArchiveIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconCloudFill18 as CloudIcon,
+  IconFolderPlusFill18 as FolderPlusIcon,
+  IconLoaderFill18 as LoaderIcon,
+  IconMagnifierFill18 as SearchIcon,
+  IconTerminalFill18 as TerminalIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+} from "nucleo-ui-fill-18";
 import {
   ChangeRequestStatusIcon,
   prStatusIndicator,

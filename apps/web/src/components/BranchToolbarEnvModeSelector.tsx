@@ -1,4 +1,9 @@
-import { FolderGit2Icon, FolderGitIcon, FolderIcon, HistoryIcon } from "lucide-react";
+import {
+  IconFolder2Fill18 as FolderGit2Icon,
+  IconFolder2Fill18 as FolderGitIcon,
+  IconFolderFill18 as FolderIcon,
+  IconHistoryFill18 as HistoryIcon,
+} from "nucleo-ui-fill-18";
 import { memo, useMemo } from "react";
 
 import {

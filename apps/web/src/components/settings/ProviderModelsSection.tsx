@@ -1,15 +1,17 @@
 "use client";
 
 import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  EyeIcon,
-  EyeOffIcon,
-  InfoIcon,
-  PlusIcon,
-  StarIcon,
-  XIcon,
-} from "lucide-react";
+  IconArrowDownFill18 as ArrowDownIcon,
+  IconArrowUpFill18 as ArrowUpIcon,
+  IconEyeFill18 as EyeIcon,
+  IconEyeSlashFill18 as EyeOffIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconCircleInfoFill18 as InfoIcon,
+  IconPlusFill18 as PlusIcon,
+  IconStarFill18 as StarIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import { useMemo, useRef, useState } from "react";
 import {
   ProviderDriverKind,

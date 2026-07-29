@@ -1,15 +1,17 @@
 "use client";
 
 import {
-  ArrowUpCircleIcon,
-  ChevronDownIcon,
-  CopyIcon,
-  DownloadIcon,
-  LoaderIcon,
-  PlusIcon,
-  Trash2Icon,
-  XIcon,
-} from "lucide-react";
+  IconCircleArrowUpFill18 as ArrowUpCircleIcon,
+  IconTrash2Fill18 as Trash2Icon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCopyFill18 as CopyIcon,
+  IconDownloadFill18 as DownloadIcon,
+  IconLoaderFill18 as LoaderIcon,
+  IconPlusFill18 as PlusIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import * as Arr from "effect/Array";
 import * as Result from "effect/Result";
 import { useState, type ReactNode } from "react";

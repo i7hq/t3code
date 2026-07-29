@@ -1,12 +1,14 @@
 import {
-  ArrowLeft,
-  ArrowRight,
-  Camera,
-  ExternalLink,
-  MousePointerClick,
-  PictureInPicture2,
-  RotateCw,
-} from "lucide-react";
+  IconArrowLeftFill18 as ArrowLeft,
+  IconArrowRightFill18 as ArrowRight,
+  IconCameraFill18 as Camera,
+  IconExternalLinkFill18 as ExternalLink,
+  IconArrowRotateClockwiseFill18 as RotateCw,
+} from "nucleo-ui-fill-18";
+import {
+  IconCursorRaysFill18 as MousePointerClick,
+  IconWindowBottomRightFill18 as PictureInPicture2,
+} from "nucleo-ui-fill-18";
 import {
   type FormEvent,
   type KeyboardEvent,

@@ -1,6 +1,6 @@
 "use client";
 
-import { PipetteIcon, XIcon } from "lucide-react";
+import { IconEyeDropperFill18 as PipetteIcon, IconXmarkFill18 as XIcon } from "nucleo-ui-fill-18";
 import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent } from "react";
 
 import { ColorSelector } from "../color-selector";

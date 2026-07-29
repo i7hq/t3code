@@ -5,13 +5,15 @@ import {
   squashAtomCommandFailure,
 } from "@t3tools/client-runtime/state/runtime";
 import {
-  Plus,
-  SquareSplitHorizontal,
-  SquareSplitVertical,
-  TerminalSquare,
-  Trash2,
-  XIcon,
-} from "lucide-react";
+  IconSplitObjXFill18 as SquareSplitHorizontal,
+  IconSplitObjYFill18 as SquareSplitVertical,
+} from "nucleo-ui-fill-18";
+import {
+  IconPlusFill18 as Plus,
+  IconSquareTerminalFill18 as TerminalSquare,
+  IconTrash2Fill18 as Trash2,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import {
   type ResolvedKeybindingsConfig,
   type ScopedThreadRef,

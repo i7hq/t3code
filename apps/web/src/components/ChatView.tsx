@@ -145,13 +145,15 @@ import { resolveShortcutCommand, shortcutLabelForCommand } from "../keybindings"
 import PlanSidebar from "./PlanSidebar";
 import ThreadTerminalDrawer from "./ThreadTerminalDrawer";
 import {
-  AlarmClockIcon,
-  CheckCircle2Icon,
-  ChevronDownIcon,
-  GitBranchIcon,
-  TriangleAlertIcon,
-  WifiOffIcon,
-} from "lucide-react";
+  IconAlarmClockFill18 as AlarmClockIcon,
+  IconCircleCheckFill18 as CheckCircle2Icon,
+  IconWifiOffFill18 as WifiOffIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCodeBranchFill18 as GitBranchIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+} from "nucleo-ui-fill-18";
 import { cn, randomHex } from "~/lib/utils";
 import { COLLAPSED_SIDEBAR_TITLEBAR_INSET_CLASS } from "~/workspaceTitlebar";
 import { stackedThreadToast, toastManager } from "./ui/toast";

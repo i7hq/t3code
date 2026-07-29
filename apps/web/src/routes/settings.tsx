@@ -1,4 +1,4 @@
-import { RotateCcwIcon } from "lucide-react";
+import { IconArrowRotateAnticlockwiseFill18 as RotateCcwIcon } from "nucleo-ui-fill-18";
 import {
   Outlet,
   createFileRoute,

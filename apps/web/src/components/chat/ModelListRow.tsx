@@ -1,6 +1,6 @@
 import { type ProviderDriverKind, type ProviderInstanceId } from "@t3tools/contracts";
 import { memo } from "react";
-import { StarIcon } from "lucide-react";
+import { IconStarFill18 as StarIcon } from "nucleo-ui-fill-18";
 import {
   getDisplayModelName,
   getTriggerDisplayModelLabel,

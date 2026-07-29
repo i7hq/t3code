@@ -12,7 +12,14 @@ import {
   isAtomCommandInterrupted,
   squashAtomCommandFailure,
 } from "@t3tools/client-runtime/state/runtime";
-import { ChevronRight, Code2, Eye, FolderTree, Globe2, LoaderCircle } from "lucide-react";
+import {
+  IconChevronRightFill18 as ChevronRight,
+  IconCode2Fill18 as Code2,
+  IconEyeFill18 as Eye,
+  IconFolderTreeFill18 as FolderTree,
+  IconGlobe2Fill18 as Globe2,
+  IconLoader2Fill18 as LoaderCircle,
+} from "nucleo-ui-fill-18";
 import * as Schema from "effect/Schema";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 

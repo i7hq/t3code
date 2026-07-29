@@ -1,5 +1,8 @@
 import { UserButton, useAuth } from "@clerk/react";
-import { LogInIcon, SmartphoneIcon } from "lucide-react";
+import {
+  IconRectLoginFill18 as LogInIcon,
+  IconMobileFill18 as SmartphoneIcon,
+} from "nucleo-ui-fill-18";
 
 import { hasCloudPublicConfig } from "../../cloud/publicConfig";
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";

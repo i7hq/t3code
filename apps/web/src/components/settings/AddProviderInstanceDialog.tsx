@@ -1,7 +1,7 @@
 "use client";
 
 import { Radio as RadioPrimitive } from "@base-ui/react/radio";
-import { CheckIcon } from "lucide-react";
+import { IconCheckFill18 as CheckIcon } from "nucleo-ui-fill-18";
 import { useMemo, useState } from "react";
 import {
   ProviderInstanceId,

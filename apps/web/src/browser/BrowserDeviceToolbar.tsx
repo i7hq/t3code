@@ -7,7 +7,7 @@ import {
   type PreviewViewportSetting,
 } from "@t3tools/contracts";
 import { PREVIEW_VIEWPORT_PRESETS, resolvePreviewViewport } from "@t3tools/shared/previewViewport";
-import { Link2, X } from "lucide-react";
+import { IconLink2Fill18 as Link2, IconXmarkFill18 as X } from "nucleo-ui-fill-18";
 import { useState } from "react";
 
 import { Button } from "~/components/ui/button";

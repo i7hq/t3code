@@ -1,6 +1,14 @@
 import type { ContextMenuItem, PreviewSessionSnapshot } from "@t3tools/contracts";
 import { getTerminalLabel } from "@t3tools/shared/terminalLabels";
-import { ClipboardList, FileDiff, Files, Globe2, Plus, TerminalSquare, X } from "lucide-react";
+import {
+  IconClipboardListFill18 as ClipboardList,
+  IconCodeCompareFill18 as FileDiff,
+  IconFilesFill18 as Files,
+  IconGlobe2Fill18 as Globe2,
+  IconPlusFill18 as Plus,
+  IconSquareTerminalFill18 as TerminalSquare,
+  IconXmarkFill18 as X,
+} from "nucleo-ui-fill-18";
 import {
   type MouseEvent as ReactMouseEvent,
   type ReactElement,

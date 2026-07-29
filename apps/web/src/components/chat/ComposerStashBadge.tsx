@@ -1,4 +1,4 @@
-import { BookmarkIcon } from "lucide-react";
+import { IconBookmarkFill18 as BookmarkIcon } from "nucleo-ui-fill-18";
 import { memo } from "react";
 
 import { cn } from "~/lib/utils";

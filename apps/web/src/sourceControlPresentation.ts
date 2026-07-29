@@ -1,4 +1,4 @@
-import { GitPullRequestIcon } from "lucide-react";
+import { IconCodePullRequestFill18 as GitPullRequestIcon } from "nucleo-ui-fill-18";
 import type { ElementType } from "react";
 import type { SourceControlProviderInfo } from "@t3tools/contracts";
 export {

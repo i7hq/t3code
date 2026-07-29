@@ -1,4 +1,4 @@
-import { TerminalIcon } from "lucide-react";
+import { IconTerminalFill18 as TerminalIcon } from "nucleo-ui-fill-18";
 
 import { cn } from "~/lib/utils";
 import {

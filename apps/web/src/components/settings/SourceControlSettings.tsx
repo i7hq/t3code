@@ -1,4 +1,8 @@
-import { ChevronDownIcon, GitPullRequestIcon, RefreshCwIcon } from "lucide-react";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCodePullRequestFill18 as GitPullRequestIcon,
+  IconRefreshClockwiseFill18 as RefreshCwIcon,
+} from "nucleo-ui-fill-18";
 import * as Duration from "effect/Duration";
 import * as Option from "effect/Option";
 import { useState, type ReactNode } from "react";

@@ -1,14 +1,14 @@
 import { useAtomValue } from "@effect/atom-react";
 import { DiffsHighlighter, getSharedHighlighter, SupportedLanguages } from "@pierre/diffs";
+import { IconReturnKeyFill18 as WrapTextIcon } from "nucleo-ui-fill-18";
 import {
-  CheckIcon,
-  ChevronRightIcon,
-  CopyIcon,
-  GlobeIcon,
-  Maximize2Icon,
-  Minimize2Icon,
-  WrapTextIcon,
-} from "lucide-react";
+  IconCheckFill18 as CheckIcon,
+  IconChevronRightFill18 as ChevronRightIcon,
+  IconCopyFill18 as CopyIcon,
+  IconGlobeFill18 as GlobeIcon,
+  IconChevronMaximizeDiagonalFill18 as Maximize2Icon,
+  IconChevronMinimizeDiagonalFill18 as Minimize2Icon,
+} from "nucleo-ui-fill-18";
 import type { ScopedThreadRef, ServerProviderSkill } from "@t3tools/contracts";
 import {
   isAtomCommandInterrupted,

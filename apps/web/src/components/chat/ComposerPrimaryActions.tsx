@@ -1,5 +1,8 @@
 import { memo, type PointerEventHandler } from "react";
-import { ChevronDownIcon, ChevronLeftIcon } from "lucide-react";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconChevronLeftFill18 as ChevronLeftIcon,
+} from "nucleo-ui-fill-18";
 import { useEnvironmentIdentificationMode } from "~/hooks/useSettings";
 import { cn } from "~/lib/utils";
 import { StageBackdropButtonArt, useSidebarStageBackdropVariant } from "../SidebarStageBackdrop";

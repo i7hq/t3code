@@ -1,4 +1,4 @@
-import { BookmarkIcon, XIcon } from "lucide-react";
+import { IconBookmarkFill18 as BookmarkIcon, IconXmarkFill18 as XIcon } from "nucleo-ui-fill-18";
 import { memo, useEffect, useState } from "react";
 
 import { formatRelativeTimeLabel } from "../../timestampFormat";

@@ -1,4 +1,4 @@
-import { DownloadIcon } from "lucide-react";
+import { IconDownloadFill18 as DownloadIcon } from "nucleo-ui-fill-18";
 import { useSyncExternalStore } from "react";
 import type { RelayClientInstallProgressStage } from "@t3tools/contracts";
 

@@ -1,5 +1,11 @@
 import type { PreviewAnnotationPayload } from "@t3tools/contracts";
-import { Frame, MousePointerClick, Paintbrush, PenLine, X } from "lucide-react";
+import {
+  IconFrameFill18 as Frame,
+  IconCursorRaysFill18 as MousePointerClick,
+  IconPaintbrushFill18 as Paintbrush,
+  IconPencilFill18 as PenLine,
+  IconXmarkFill18 as X,
+} from "nucleo-ui-fill-18";
 import type { ReactNode } from "react";
 
 import type { ComposerImageAttachment } from "~/composerDraftStore";

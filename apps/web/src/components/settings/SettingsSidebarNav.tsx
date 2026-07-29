@@ -1,16 +1,18 @@
 import { useCallback, type ComponentType } from "react";
 import {
-  ArchiveIcon,
-  ArrowLeftIcon,
-  BotIcon,
-  FlaskConicalIcon,
-  GitBranchIcon,
-  KeyboardIcon,
-  Link2Icon,
-  PaletteIcon,
-  Settings2Icon,
-  WrenchIcon,
-} from "lucide-react";
+  IconArchiveFill18 as ArchiveIcon,
+  IconArrowLeftFill18 as ArrowLeftIcon,
+  IconFlaskFill18 as FlaskConicalIcon,
+  IconKeyboardFill18 as KeyboardIcon,
+  IconLink2Fill18 as Link2Icon,
+  IconPaletteFill18 as PaletteIcon,
+  IconSliders2Fill18 as Settings2Icon,
+  IconWrenchFill18 as WrenchIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconCodeBranchFill18 as GitBranchIcon,
+  IconRobotFill18 as BotIcon,
+} from "nucleo-ui-fill-18";
 import { useCanGoBack, useNavigate } from "@tanstack/react-router";
 
 import {

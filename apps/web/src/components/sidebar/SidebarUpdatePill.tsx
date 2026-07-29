@@ -1,4 +1,9 @@
-import { DownloadIcon, RotateCwIcon, TriangleAlertIcon, XIcon } from "lucide-react";
+import {
+  IconArrowRotateClockwiseFill18 as RotateCwIcon,
+  IconDownloadFill18 as DownloadIcon,
+  IconTriangleWarningFill18 as TriangleAlertIcon,
+  IconXmarkFill18 as XIcon,
+} from "nucleo-ui-fill-18";
 import { useCallback, useState } from "react";
 import { isElectron } from "../../env";
 import { useDesktopUpdateState } from "../../state/desktopUpdate";

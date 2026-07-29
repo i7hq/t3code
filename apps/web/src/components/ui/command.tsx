@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog as CommandDialogPrimitive } from "@base-ui/react/dialog";
-import { SearchIcon } from "lucide-react";
+import { IconMagnifierFill18 as SearchIcon } from "nucleo-ui-fill-18";
 import type * as React from "react";
 import { cn } from "~/lib/utils";
 import {

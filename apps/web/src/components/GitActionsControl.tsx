@@ -20,16 +20,18 @@ import * as Option from "effect/Option";
 import { useCallback, useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import {
-  CheckIcon,
-  ChevronDownIcon,
-  CloudUploadIcon,
-  ExternalLinkIcon,
-  GitBranchPlusIcon,
-  GitCommitIcon,
-  InfoIcon,
-  LockIcon,
-  GlobeIcon,
-} from "lucide-react";
+  IconCloudUploadFill18 as CloudUploadIcon,
+  IconExternalLinkFill18 as ExternalLinkIcon,
+  IconBranchOutFill18 as GitBranchPlusIcon,
+  IconCodeCommitFill18 as GitCommitIcon,
+  IconLockFill18 as LockIcon,
+  IconGlobeFill18 as GlobeIcon,
+} from "nucleo-ui-fill-18";
+import {
+  IconCheckFill18 as CheckIcon,
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCircleInfoFill18 as InfoIcon,
+} from "nucleo-ui-fill-18";
 import { Radio as RadioPrimitive } from "@base-ui/react/radio";
 import { AzureDevOpsIcon, BitbucketIcon, GitHubIcon, GitLabIcon } from "~/components/Icons";
 import { RadioGroup } from "~/components/ui/radio-group";

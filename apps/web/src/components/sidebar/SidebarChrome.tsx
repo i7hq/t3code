@@ -1,4 +1,4 @@
-import { SettingsIcon } from "lucide-react";
+import { IconGearFill18 as SettingsIcon } from "nucleo-ui-fill-18";
 import { memo, useCallback } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
 

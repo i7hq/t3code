@@ -1,6 +1,10 @@
 import { scopeProjectRef } from "@t3tools/client-runtime/environment";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { LinkIcon, PlusIcon, RotateCcwIcon } from "lucide-react";
+import {
+  IconLinkFill18 as LinkIcon,
+  IconPlusFill18 as PlusIcon,
+  IconArrowRotateAnticlockwiseFill18 as RotateCcwIcon,
+} from "nucleo-ui-fill-18";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { openCommandPalette } from "../commandPaletteBus";

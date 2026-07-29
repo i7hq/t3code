@@ -5,7 +5,12 @@ import {
 } from "@t3tools/client-runtime/state/runtime";
 import type { ContextMenuItem, EnvironmentId, VcsRef, ThreadId } from "@t3tools/contracts";
 import { LegendList, type LegendListRef } from "@legendapp/list/react";
-import { ChevronDownIcon, GitBranchIcon, RefreshCwIcon, SearchIcon } from "lucide-react";
+import {
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCodeBranchFill18 as GitBranchIcon,
+  IconRefreshClockwiseFill18 as RefreshCwIcon,
+  IconMagnifierFill18 as SearchIcon,
+} from "nucleo-ui-fill-18";
 import {
   useCallback,
   useDeferredValue,

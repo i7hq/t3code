@@ -16,7 +16,7 @@ import {
 } from "@t3tools/shared/model";
 import { memo, useCallback, useState } from "react";
 import type { VariantProps } from "class-variance-authority";
-import { ZapIcon } from "lucide-react";
+import { IconBoltFill18 as ZapIcon } from "nucleo-ui-fill-18";
 import { buttonVariants } from "../ui/button";
 import {
   Menu,

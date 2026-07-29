@@ -1,14 +1,14 @@
 import { scopeProjectRef, scopeThreadRef } from "@t3tools/client-runtime/environment";
 import type { EnvironmentId, ThreadId } from "@t3tools/contracts";
 import {
-  ChevronDownIcon,
-  CloudIcon,
-  FolderGit2Icon,
-  FolderGitIcon,
-  FolderIcon,
-  HistoryIcon,
-  MonitorIcon,
-} from "lucide-react";
+  IconChevronDownFill18 as ChevronDownIcon,
+  IconCloudFill18 as CloudIcon,
+  IconFolder2Fill18 as FolderGit2Icon,
+  IconFolder2Fill18 as FolderGitIcon,
+  IconFolderFill18 as FolderIcon,
+  IconHistoryFill18 as HistoryIcon,
+  IconMonitorFill18 as MonitorIcon,
+} from "nucleo-ui-fill-18";
 import { memo, useCallback, useMemo } from "react";
 
 import { useComposerDraftStore, type DraftId } from "../composerDraftStore";

@@ -5,7 +5,7 @@ import {
   derivePendingUserInputProgress,
   type PendingUserInputDraftAnswer,
 } from "../../pendingUserInput";
-import { CheckIcon } from "lucide-react";
+import { IconCheckFill18 as CheckIcon } from "nucleo-ui-fill-18";
 import { cn } from "~/lib/utils";
 
 interface PendingUserInputPanelProps {
