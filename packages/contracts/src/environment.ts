@@ -57,6 +57,11 @@ export type ExecutionEnvironmentCapabilities = typeof ExecutionEnvironmentCapabi
 export const ExecutionEnvironmentDescriptor = Schema.Struct({
   environmentId: EnvironmentId,
   label: TrimmedNonEmptyString,
+  /** Tilde-abbreviated state directory backing this environment (e.g.
+      "~/.t3/userdata"). Disambiguates multiple environments on one host,
+      since the environment id is minted per state directory. Absent on
+      pre-stateDir servers, so clients fall back to the environment id. */
+  stateDir: Schema.optionalKey(TrimmedNonEmptyString),
   platform: ExecutionEnvironmentPlatform,
   serverVersion: TrimmedNonEmptyString,
   capabilities: ExecutionEnvironmentCapabilities,

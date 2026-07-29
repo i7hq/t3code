@@ -1,5 +1,6 @@
 import * as NodeServices from "@effect/platform-node/NodeServices";
 import { expect, it } from "@effect/vitest";
+import { HostProcessHomeDirectory } from "@t3tools/shared/hostProcess";
 import * as Effect from "effect/Effect";
 import * as FileSystem from "effect/FileSystem";
 import * as Layer from "effect/Layer";
@@ -69,6 +70,27 @@ it.layer(NodeServices.layer)("ServerEnvironmentLive", (it) => {
       expect(first.environmentId).toBe(second.environmentId);
       expect(second.capabilities.repositoryIdentity).toBe(true);
       expect(second.capabilities.connectionProbe).toBe(true);
+    }),
+  );
+
+  it.effect("advertises the tilde-abbreviated state directory", () =>
+    Effect.gen(function* () {
+      const fileSystem = yield* FileSystem.FileSystem;
+      const baseDir = yield* fileSystem.makeTempDirectoryScoped({
+        prefix: "t3-server-environment-state-dir-test-",
+      });
+
+      const descriptor = yield* Effect.gen(function* () {
+        const serverEnvironment = yield* ServerEnvironment.ServerEnvironment;
+        return yield* serverEnvironment.getDescriptor;
+      }).pipe(
+        Effect.provide(makeServerEnvironmentLayer(baseDir)),
+        Effect.provideService(HostProcessHomeDirectory, baseDir),
+      );
+
+      // deriveServerPaths puts the state dir at <baseDir>/userdata, so with
+      // the home directory pinned to baseDir the advertised value abbreviates.
+      expect(descriptor.stateDir).toBe("~/userdata");
     }),
   );
 

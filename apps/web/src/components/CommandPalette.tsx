@@ -63,6 +63,7 @@ import { sourceControlEnvironment } from "../state/sourceControl";
 import { useAtomCommand } from "../state/use-atom-command";
 import { useAtomQueryRunner } from "../state/use-atom-query-runner";
 import { useEnvironments, usePrimaryEnvironmentId } from "../state/environments";
+import { useEnvironmentStateDirs } from "../state/environmentStateDirs";
 import { useProjects, useThreadShells } from "../state/entities";
 import { resolveThreadActionProjectRef, startNewThreadFromContext } from "../lib/chatThreadActions";
 import {
@@ -633,6 +634,17 @@ function OpenCommandPaletteDialog(props: {
     return options;
   }, [environments]);
   const defaultAddProjectEnvironmentId = addProjectEnvironmentOptions[0]?.environmentId ?? null;
+  const remoteAddProjectEnvironmentIds = useMemo(
+    () =>
+      addProjectEnvironmentOptions
+        .filter((option) => !option.isPrimary)
+        .map((option) => option.environmentId),
+    [addProjectEnvironmentOptions],
+  );
+  const environmentStateDirs = useEnvironmentStateDirs(
+    remoteAddProjectEnvironmentIds,
+    clientSettings.showEnvironmentStateDir,
+  );
   const wslAddProjectEnvironmentOption = useMemo(
     () =>
       addProjectEnvironmentOptions.find((option) => {
@@ -1132,9 +1144,16 @@ function OpenCommandPaletteDialog(props: {
     (option) => ({
       kind: "action",
       value: `action:add-project:environment:${option.environmentId}`,
-      searchTerms: [option.label, option.environmentId, option.isPrimary ? "this device" : ""],
+      searchTerms: [
+        option.label,
+        option.environmentId,
+        environmentStateDirs.get(option.environmentId) ?? "",
+        option.isPrimary ? "this device" : "",
+      ],
       title: option.label,
-      description: option.isPrimary ? "This device" : option.environmentId,
+      description: option.isPrimary
+        ? "This device"
+        : (environmentStateDirs.get(option.environmentId) ?? option.environmentId),
       icon: <FolderPlusIcon className={ITEM_ICON_CLASS} />,
       keepOpen: true,
       run: async () => {
