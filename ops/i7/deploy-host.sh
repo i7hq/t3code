@@ -108,7 +108,8 @@ if [[ $activate == "--activate" ]]; then
     "set -eu
 systemctl --user disable --now t3code.service
 systemctl --user daemon-reload
-systemctl --user enable --now t3code-i7.service
+systemctl --user enable t3code-i7.service
+systemctl --user restart t3code-i7.service
 systemctl --user is-active --quiet t3code-i7.service
 curl --fail --silent --show-error --retry 10 --retry-delay 1 \
   --retry-connrefused \

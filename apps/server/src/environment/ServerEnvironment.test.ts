@@ -1,6 +1,5 @@
 import * as NodeServices from "@effect/platform-node/NodeServices";
 import { expect, it } from "@effect/vitest";
-import { HostProcessHomeDirectory } from "@t3tools/shared/hostProcess";
 import * as Effect from "effect/Effect";
 import * as FileSystem from "effect/FileSystem";
 import * as Layer from "effect/Layer";
@@ -73,7 +72,7 @@ it.layer(NodeServices.layer)("ServerEnvironmentLive", (it) => {
     }),
   );
 
-  it.effect("advertises the tilde-abbreviated state directory", () =>
+  it.effect("advertises the state directory verbatim", () =>
     Effect.gen(function* () {
       const fileSystem = yield* FileSystem.FileSystem;
       const baseDir = yield* fileSystem.makeTempDirectoryScoped({
@@ -83,14 +82,12 @@ it.layer(NodeServices.layer)("ServerEnvironmentLive", (it) => {
       const descriptor = yield* Effect.gen(function* () {
         const serverEnvironment = yield* ServerEnvironment.ServerEnvironment;
         return yield* serverEnvironment.getDescriptor;
-      }).pipe(
-        Effect.provide(makeServerEnvironmentLayer(baseDir)),
-        Effect.provideService(HostProcessHomeDirectory, baseDir),
-      );
+      }).pipe(Effect.provide(makeServerEnvironmentLayer(baseDir)));
 
-      // deriveServerPaths puts the state dir at <baseDir>/userdata, so with
-      // the home directory pinned to baseDir the advertised value abbreviates.
-      expect(descriptor.stateDir).toBe("~/userdata");
+      const derivedPaths = yield* ServerConfig.deriveServerPaths(baseDir, undefined);
+      // Full path on purpose: same-host environments under different users
+      // only differ by the home prefix, so abbreviating would collapse them.
+      expect(descriptor.stateDir).toBe(derivedPaths.stateDir);
     }),
   );
 

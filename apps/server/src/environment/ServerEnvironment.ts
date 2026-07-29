@@ -1,9 +1,5 @@
 import { EnvironmentId, type ExecutionEnvironmentDescriptor } from "@t3tools/contracts";
-import {
-  HostProcessArchitecture,
-  HostProcessHomeDirectory,
-  HostProcessPlatform,
-} from "@t3tools/shared/hostProcess";
+import { HostProcessArchitecture, HostProcessPlatform } from "@t3tools/shared/hostProcess";
 import * as Context from "effect/Context";
 import * as Crypto from "effect/Crypto";
 import * as Effect from "effect/Effect";
@@ -65,23 +61,6 @@ function platformArch(
   }
 }
 
-/** Abbreviate a path under the user's home directory to `~/...` so the
-    descriptor identifies the state directory without exposing the username. */
-export function abbreviateHomePath(
-  value: string,
-  homeDirectory: string,
-  separator: string,
-): string {
-  if (!homeDirectory) {
-    return value;
-  }
-  if (value === homeDirectory) {
-    return "~";
-  }
-  const prefix = homeDirectory.endsWith(separator) ? homeDirectory : `${homeDirectory}${separator}`;
-  return value.startsWith(prefix) ? `~${separator}${value.slice(prefix.length)}` : value;
-}
-
 export const make = Effect.gen(function* () {
   const fileSystem = yield* FileSystem.FileSystem;
   const path = yield* Path.Path;
@@ -89,7 +68,6 @@ export const make = Effect.gen(function* () {
   const crypto = yield* Crypto.Crypto;
   const hostPlatform = yield* HostProcessPlatform;
   const hostArchitecture = yield* HostProcessArchitecture;
-  const hostHomeDirectory = yield* HostProcessHomeDirectory;
 
   const readPersistedEnvironmentId = Effect.gen(function* () {
     const exists = yield* fileSystem.exists(serverConfig.environmentIdPath).pipe(
@@ -154,7 +132,9 @@ export const make = Effect.gen(function* () {
   const descriptor: ExecutionEnvironmentDescriptor = {
     environmentId,
     label,
-    stateDir: abbreviateHomePath(serverConfig.stateDir, hostHomeDirectory, path.sep),
+    // Advertised verbatim: same-host environments under different users only
+    // differ by the home prefix, so abbreviating it would collapse them.
+    stateDir: serverConfig.stateDir,
     platform: {
       os: platformOs(hostPlatform),
       arch: platformArch(hostArchitecture),
