@@ -12,6 +12,7 @@ import * as Option from "effect/Option";
 import * as Path from "effect/Path";
 
 import * as DesktopAppSettings from "../settings/DesktopAppSettings.ts";
+import * as ElectronProtocol from "../electron/ElectronProtocol.ts";
 import * as DesktopConfig from "./DesktopConfig.ts";
 import { isNightlyDesktopVersion } from "../updates/updateChannels.ts";
 
@@ -36,6 +37,7 @@ export class DesktopEnvironment extends Context.Service<
     readonly processArch: string;
     readonly isPackaged: boolean;
     readonly isDevelopment: boolean;
+    readonly rendererScheme: string;
     readonly appVersion: string;
     readonly appPath: string;
     readonly resourcesPath: string;
@@ -139,6 +141,10 @@ const make = Effect.fn("desktop.environment.make")(function* (
   const homeDirectory = input.homeDirectory;
   const devServerUrl = config.devServerUrl;
   const isDevelopment = Option.isSome(devServerUrl);
+  const rendererScheme =
+    isDevelopment && config.useProductionRendererOrigin
+      ? ElectronProtocol.DESKTOP_PRODUCTION_SCHEME
+      : ElectronProtocol.getDesktopScheme(isDevelopment);
   const appDataDirectory =
     input.platform === "win32"
       ? Option.getOrElse(config.appDataDirectory, () =>
@@ -171,6 +177,7 @@ const make = Effect.fn("desktop.environment.make")(function* (
     processArch: input.processArch,
     isPackaged: input.isPackaged,
     isDevelopment,
+    rendererScheme,
     appVersion: input.appVersion,
     appPath: input.appPath,
     resourcesPath,

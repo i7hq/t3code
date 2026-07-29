@@ -51,6 +51,7 @@ describe("DesktopEnvironment", () => {
       );
 
       assert.equal(environment.isDevelopment, true);
+      assert.equal(environment.rendererScheme, "t3code-dev");
       assert.equal(environment.appDataDirectory, "/Users/alice/Library/Application Support");
       assert.equal(environment.baseDir, "/tmp/t3");
       assert.equal(environment.stateDir, "/tmp/t3/userdata");
@@ -107,7 +108,26 @@ describe("DesktopEnvironment", () => {
       const production = yield* makeEnvironment();
 
       assert.equal(development.stateDir, "/Users/alice/.t3/dev");
+      assert.equal(development.rendererScheme, "t3code-dev");
       assert.equal(production.stateDir, "/Users/alice/.t3/userdata");
+      assert.equal(production.rendererScheme, "t3code");
+    }),
+  );
+
+  it.effect("can use the production renderer origin with isolated development state", () =>
+    Effect.gen(function* () {
+      const environment = yield* makeEnvironment(
+        {},
+        {
+          VITE_DEV_SERVER_URL: "http://localhost:5173",
+          T3CODE_DESKTOP_USE_PRODUCTION_ORIGIN: "true",
+        },
+      );
+
+      assert.equal(environment.isDevelopment, true);
+      assert.equal(environment.rendererScheme, "t3code");
+      assert.equal(environment.stateDir, "/Users/alice/.t3/dev");
+      assert.equal(environment.userDataDirName, "t3code-dev");
     }),
   );
 

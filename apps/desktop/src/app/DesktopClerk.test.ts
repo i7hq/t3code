@@ -29,6 +29,7 @@ const makeDesktopClerkLayer = (isDevelopment = true) => {
   const environment = DesktopEnvironment.DesktopEnvironment.of({
     stateDir: "/tmp/t3-state",
     isDevelopment,
+    rendererScheme: isDevelopment ? "t3code-dev" : "t3code",
   } as unknown as DesktopEnvironment.DesktopEnvironment["Service"]);
 
   return DesktopClerk.layer.pipe(
@@ -124,15 +125,12 @@ describe("DesktopClerk", () => {
     });
   });
 
-  it.each([
-    { isDevelopment: true, scheme: "t3code-dev" },
-    { isDevelopment: false, scheme: "t3code" },
-  ])("configures the SDK with the $scheme renderer origin", ({ isDevelopment, scheme }) => {
+  it.each(["t3code-dev", "t3code"])("configures the SDK with the %s renderer origin", (scheme) => {
     const bridge = { cleanup: vi.fn() };
     storageMock.mockReturnValue(storageAdapter);
     createClerkBridgeMock.mockReturnValue(bridge);
 
-    assert.equal(DesktopClerk.createDesktopClerkBridge("/tmp/t3-state", isDevelopment), bridge);
+    assert.equal(DesktopClerk.createDesktopClerkBridge("/tmp/t3-state", scheme), bridge);
     assert.deepEqual(storageMock.mock.calls, [[{ path: "/tmp/t3-state" }]]);
     assert.deepEqual(createClerkBridgeMock.mock.calls, [
       [

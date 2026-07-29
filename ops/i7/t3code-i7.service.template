@@ -1,0 +1,16 @@
+[Unit]
+Description=T3 Code i7 fork
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@HOME@
+Environment=PATH=@NODE_DIR@:/usr/local/bin:/usr/bin:/bin
+Environment=T3CODE_HOME=@HOME@/.t3
+ExecStart=@NODE_BIN@ @CHECKOUT@/apps/server/dist/bin.mjs serve --host 127.0.0.1 --port @PORT@ --base-dir @HOME@/.t3
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

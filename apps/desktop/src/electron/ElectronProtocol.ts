@@ -24,6 +24,10 @@ export function getDesktopUrl(isDevelopment: boolean): string {
   return `${getDesktopOrigin(isDevelopment)}/`;
 }
 
+export function getDesktopUrlForScheme(scheme: string): string {
+  return `${scheme}://${DESKTOP_HOST}/`;
+}
+
 export class ElectronProtocolRegistrationError extends Schema.TaggedErrorClass<ElectronProtocolRegistrationError>()(
   "ElectronProtocolRegistrationError",
   {
