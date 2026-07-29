@@ -38,6 +38,8 @@ import * as DateTime from "effect/DateTime";
 import * as Option from "effect/Option";
 
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
+import { useClientSettings } from "../../hooks/useSettings";
+import { useEnvironmentStateDirs } from "../../state/environmentStateDirs";
 import { cn } from "../../lib/utils";
 import { formatElapsedDurationLabel, formatExpiresInLabel } from "../../timestampFormat";
 import { resolveDesktopPairingUrl, resolveHostedPairingUrl } from "./pairingUrls";
@@ -1338,6 +1340,7 @@ function NetworkAccessDescription({
 
 type SavedBackendListRowProps = {
   environment: EnvironmentPresentation;
+  stateDir: string | null;
   removingEnvironmentId: EnvironmentId | null;
   onConnect: (environmentId: EnvironmentId) => void;
   onRemove: (environmentId: EnvironmentId) => void;
@@ -1345,6 +1348,7 @@ type SavedBackendListRowProps = {
 
 function SavedBackendListRow({
   environment,
+  stateDir,
   removingEnvironmentId,
   onConnect,
   onRemove,
@@ -1398,6 +1402,7 @@ function SavedBackendListRow({
   const metadataBits = [
     sshTarget ? `SSH ${formatDesktopSshTarget(sshTarget)}` : null,
     environment.relayManaged ? "T3 Connect" : null,
+    stateDir,
   ].filter((value): value is string => value !== null);
 
   // The WSL backend is a desktop-managed local backend (it surfaces as a bearer
@@ -1733,6 +1738,15 @@ export function ConnectionsSettings() {
         .filter((environment) => environment.entry.target._tag !== "PrimaryConnectionTarget")
         .toSorted((left, right) => left.label.localeCompare(right.label)),
     [environments],
+  );
+  const clientSettings = useClientSettings();
+  const savedEnvironmentIds = useMemo(
+    () => savedEnvironments.map((environment) => environment.environmentId),
+    [savedEnvironments],
+  );
+  const environmentStateDirs = useEnvironmentStateDirs(
+    savedEnvironmentIds,
+    clientSettings.showEnvironmentStateDir,
   );
   const savedDesktopSshEnvironmentsByAlias = useMemo(
     () =>
@@ -3383,6 +3397,7 @@ export function ConnectionsSettings() {
           <SavedBackendListRow
             key={environment.environmentId}
             environment={environment}
+            stateDir={environmentStateDirs.get(environment.environmentId) ?? null}
             removingEnvironmentId={removingSavedEnvironmentId}
             onConnect={handleConnectSavedBackend}
             onRemove={handleRemoveSavedBackend}
