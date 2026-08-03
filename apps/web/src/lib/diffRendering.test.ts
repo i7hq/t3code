@@ -1,3 +1,4 @@
+import type { Hunk } from "@pierre/diffs/types";
 import { describe, expect, it } from "vite-plus/test";
 import { buildPatchCacheKey, getDiffLineStat, getRenderablePatch } from "./diffRendering";
 
@@ -62,7 +63,7 @@ describe("getRenderablePatch", () => {
     expect(file?.hunks[1]?.collapsedBefore).toBeGreaterThan(0);
     expect(file?.hunks[1]?.unifiedLineStart).toBe(file?.hunks[0]?.unifiedLineCount);
     expect(file?.unifiedLineCount).toBe(
-      file?.hunks.reduce((total, hunk) => total + hunk.unifiedLineCount, 0),
+      file?.hunks.reduce((total: number, hunk: Hunk) => total + hunk.unifiedLineCount, 0),
     );
   });
 
